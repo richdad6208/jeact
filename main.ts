@@ -1,4 +1,4 @@
-import { http } from "node:http";
+import http from "node:http";
 
 const hostname = "127.0.0.1";
 const port = 3000;
@@ -8,6 +8,8 @@ const server = http.createServer((req, res) => {
   res.setHeader("Content-Type", "text/plain");
   res.end("Hello, world!\n");
 });
+
+console.log("hi");
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
